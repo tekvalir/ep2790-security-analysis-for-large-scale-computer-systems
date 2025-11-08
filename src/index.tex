@@ -1,0 +1,56 @@
+\start{Draft 1}{\textbf{Security analysis of large scale computer systems}}
+
+\section*{Introduction}
+
+For the last decade, attacks targeting hospitals has increased steadily. This is why, I decided to chose, as subject of this case-study, a state-run hospital network computer infrastructure to study. This case-study is not based on an existing infrastructure and come from the imagination of the author.
+
+\section{Phase 0}
+
+First of all, it is necessary to define the purpose of the system, the main technical components and what is considered inside and outside of the scope of this study.\\
+\begin{figure}[h!]
+    \center
+    \includegraphics[width=\linewidth]{fig/global_diagram_with_grid.png}
+    \caption{Diagram of the hospital network infrastructure}
+    \label{fig:globdiag}
+\end{figure}
+
+The \autoref{fig:globdiag} represents the studied infrastructure of the hospital network. The resources shared among all hospitals and one hospital network is depicted on the figure. The latter is the same exact copy for every hospitals of the studied network.
+\subsection{Component description}
+\noindent For the hospital internal infrastructure, there are the following components:
+\begin{itemize}
+    \item Hospital Firewall: bridges between the hospital local area network and internet;
+    \item Local file sharing system: enables medical staff to store and exchange files;
+    \item Local patient data server: stores internal medical data of the patients (medical background, stays at the hospital, prescriptions, ...);
+    \item ERP Server: manages the hospital resources (supplies management, in which room is which patient, available beds, ...);
+    \item Remote access server: enables technical staff to access remotely the local area network of the hospital;
+    \item Electrical grid server: manages and optimises the allocation of electricity accross hospital as well as backup generator;
+    \item Medical staff computer: enables medical staff to access local area network of the hospital;
+    \item Staff tablets: enables medical staff to access local area network of the hospital through WiFi;
+    \item Wireless AP: enables staff tablets to connect to the hospital local area network;
+    \item Medical devices (IoT): optionnally connected medical devices (MRI, scanners, patients monitoring, ...);
+\end{itemize}
+
+\noindent And the shared resources infrastructure is made of the following components:
+\begin{itemize}
+    \item Shared network firewall: bridges between the shared resources internal network and internet;
+    \item Appointment system: more widely public website of the hospital network that enables the patient to book appointment with doctors and access their prescriptions;
+    \item Network ERP system: manages the network resources between hospital (distributing supplies, managing staff allotment and salaries, ...);
+    \item Active directory server: LDAP server using microsoft active directory to manage accounts and permissions for staff;
+    \item Technical staff computer: enables technical staff to access shared resources infrastructure and vpn servers of different hospitals;
+\end{itemize}
+
+\section{Phase 1}
+\begin{figure}[h!]
+    \center
+    \includegraphics[width=\linewidth]{fig/Phase2-goals_vis.drawio.png}
+    \caption{Diagram depicting the business goal of the hospital network}
+    \label{fig:business-goals}
+    \medskip
+    \small
+    Goals are ordered by importance from top to bottom. A link between two goals indicates that the lower goal serves as a means of achieving the higher goal.
+\end{figure}
+
+\section{Phase 2}
+
+\section{Phase 3}
+

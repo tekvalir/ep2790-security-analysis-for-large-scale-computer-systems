@@ -1,0 +1,98 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0" version="28.2.9" pages="2">
+  <diagram name="goals_vis" id="ciT2mkmYgsw6VEPFvGfR">
+    <mxGraphModel dx="1176" dy="942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-19" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-1" target="gP3e_jmOiOb8HRfWvCbx-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-20" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-1" target="gP3e_jmOiOb8HRfWvCbx-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Increase patients healed&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=light-dark(#000000, #996500);" vertex="1" parent="1">
+          <mxGeometry x="510" y="20" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-3" target="gP3e_jmOiOb8HRfWvCbx-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-33" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-3" target="gP3e_jmOiOb8HRfWvCbx-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-34" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-3" target="gP3e_jmOiOb8HRfWvCbx-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-35" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-3" target="gP3e_jmOiOb8HRfWvCbx-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-3" value="Lower costs per patient" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="230" y="150" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-26" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-4" target="gP3e_jmOiOb8HRfWvCbx-9">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="644" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-27" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-4" target="gP3e_jmOiOb8HRfWvCbx-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-4" value="Optimize number of available beds" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=light-dark(#000000, #996500);fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="510" y="150" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-21" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-5" target="gP3e_jmOiOb8HRfWvCbx-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-5" value="Keep healthy and happy staff" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=light-dark(#000000, #996500);" vertex="1" parent="1">
+          <mxGeometry x="800" y="150" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-6" value="Optimise electrical distribution" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="270" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-7" value="Lower energy consumption" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="230" y="270" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-8" value="Lower average stay duration" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="415" y="270" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-9" value="Increase number of beds" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="605" y="270" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-22" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-10" target="gP3e_jmOiOb8HRfWvCbx-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-23" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-10" target="gP3e_jmOiOb8HRfWvCbx-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-24" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-10" target="gP3e_jmOiOb8HRfWvCbx-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-10" value="Lower workload" style="rounded=0;whiteSpace=wrap;html=1;fontSize=16;fillColor=#ffe6cc;strokeColor=light-dark(#000000, #996500);" vertex="1" parent="1">
+          <mxGeometry x="800" y="270" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-11" value="Increase online booking for regular appointments" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=light-dark(#000000, #996500);fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="595" y="400" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-25" style="edgeStyle=none;shape=connector;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=none;endFill=0;" edge="1" parent="1" source="gP3e_jmOiOb8HRfWvCbx-12" target="gP3e_jmOiOb8HRfWvCbx-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-12" value="Optimise efficiency of medical staff" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="790" y="400" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-13" value="Increase IT services efficiency and availability" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="790" y="510" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gP3e_jmOiOb8HRfWvCbx-14" value="Hire new staff" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=light-dark(#000000, #996500);align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=16;fontColor=default;fillColor=#ffe6cc;" vertex="1" parent="1">
+          <mxGeometry x="990" y="400" width="170" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="DDiMAbxmjIyDYNXSIgnj" name="goals_lang">
+    <mxGraphModel dx="1176" dy="942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
