@@ -2,19 +2,21 @@
 
 \section*{Introduction}
 
-For the last decade, attacks targeting hospitals has increased steadily. This is why, I decided to chose, as subject of this case-study, a state-run hospital network computer infrastructure to study. This case-study is not based on an existing infrastructure and come from the imagination of the author.
+This document is the first draft of the project done for the EP2790 course at KTH Royal Institute. The case that I chose to study for this project is a state-run hospital network computer infrastructure.
 
-\section{Phase 0}
+% For the last decade, attacks targeting hospitals has increased steadily. Therefore, I decided to choose, as subject of this case-study, a state-run hospital network computer infrastructure to study. This case-study is not based on an existing infrastructure and come from the imagination of the author. This work is part of the assignments for the course EP2790 Security analysis of large scale computer systems at KTH Royal Insitute in Sweden. The framework used for the risk analysis is the YACRAF framework (Yet another cybersecurity risk assessment framework) developped by KTH researchers~\autocite{EkstedtMathias2023Yacr} as required by the course examiner.
+
+\section{Phase 0: Scope and delimitations}
 
 First of all, it is necessary to define the purpose of the system, the main technical components and what is considered inside and outside of the scope of this study.\\
 \begin{figure}[h!]
-    \center
+    \centering
     \includegraphics[width=\linewidth]{fig/global_diagram_with_grid.png}
     \caption{Diagram of the hospital network infrastructure}
-    \label{fig:globdiag}
+    \label{fig:overview-diagram}
 \end{figure}
 
-The \autoref{fig:globdiag} represents the studied infrastructure of the hospital network. The resources shared among all hospitals and one hospital network is depicted on the figure. The latter is the same exact copy for every hospitals of the studied network.
+The \autoref{fig:overview-diagram} represents the studied infrastructure of the hospital network. The resources shared among all hospitals and one hospital network is depicted on the figure. The latter is the same exact copy for every hospitals of the studied network.
 \subsection{Component description}
 \noindent For the hospital internal infrastructure, there are the following components:
 \begin{itemize}
@@ -23,11 +25,11 @@ The \autoref{fig:globdiag} represents the studied infrastructure of the hospital
     \item Local patient data server: stores internal medical data of the patients (medical background, stays at the hospital, prescriptions, ...);
     \item ERP Server: manages the hospital resources (supplies management, in which room is which patient, available beds, ...);
     \item Remote access server: enables technical staff to access remotely the local area network of the hospital;
-    \item Electrical grid server: manages and optimises the allocation of electricity accross hospital as well as backup generator;
+    \item Electrical grid server: manages and optimises the allocation of electricity across hospital as well as backup generator;
     \item Medical staff computer: enables medical staff to access local area network of the hospital;
     \item Staff tablets: enables medical staff to access local area network of the hospital through WiFi;
     \item Wireless AP: enables staff tablets to connect to the hospital local area network;
-    \item Medical devices (IoT): optionnally connected medical devices (MRI, scanners, patients monitoring, ...);
+    \item Medical devices (IoT): optionally connected medical devices (MRI, scanners, patients monitoring, ...);
 \end{itemize}
 
 \noindent And the shared resources infrastructure is made of the following components:
@@ -35,13 +37,16 @@ The \autoref{fig:globdiag} represents the studied infrastructure of the hospital
     \item Shared network firewall: bridges between the shared resources internal network and internet;
     \item Appointment system: more widely public website of the hospital network that enables the patient to book appointment with doctors and access their prescriptions;
     \item Network ERP system: manages the network resources between hospital (distributing supplies, managing staff allotment and salaries, ...);
-    \item Active directory server: LDAP server using microsoft active directory to manage accounts and permissions for staff;
+    \item Active directory server: LDAP server using Microsoft active directory to manage accounts and permissions for staff;
     \item Technical staff computer: enables technical staff to access shared resources infrastructure and vpn servers of different hospitals;
 \end{itemize}
 
-\section{Phase 1}
+\section{Phase 1: Business analysis}
+
+\subsection{Business goals}
+The \autoref{fig:business-goals} breakdowns the business goals of the studied organisation, whose main goal is healing the larger number of patients.
 \begin{figure}[h!]
-    \center
+    \centering
     \includegraphics[width=\linewidth]{fig/Phase2-goals_vis.drawio.png}
     \caption{Diagram depicting the business goal of the hospital network}
     \label{fig:business-goals}
@@ -50,7 +55,165 @@ The \autoref{fig:globdiag} represents the studied infrastructure of the hospital
     Goals are ordered by importance from top to bottom. A link between two goals indicates that the lower goal serves as a means of achieving the higher goal.
 \end{figure}
 
-\section{Phase 2}
+% TODO add explanation
+
+\subsection{Business analysis}
+The \autoref{fig:business-analysis} highlights the use-cases and links them to actors, goals and assets.
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{fig/Phase2-analysis_vis.drawio.png}
+    \caption{Diagram depicting the use-cases linked to business goals, actors and assets}
+    \label{fig:business-analysis}
+    \medskip
+    \small
+    In orange the business goals, in green the use cases and in magenta assets
+\end{figure}
+
+\subsection{Loss events}
+The purpose of this section is to determine the possible loss-events, \ie what could possibly negatively impact the systems and thus the actors in case of attacks.\\
+The \autoref{tab:loss-events} lists (not exhaustively) the possible loss events that can impact the modelled infrastructure.
+
+\begin{table}
+    \centering
+    \begin{tblr}{
+            colspec = {|Q[c]| X[2, l]| X[1, l]| X[1, l]| X[1, c]|}, % Q columns auto-wrap and adjust width
+            width = \textwidth,
+        }
+        \hline
+        ID & Loss Event & Impacted actor & Type & Magnitude\\
+        \hline
+        1 & Electrical outage & All & Productivity & 10\\
+        \hline
+        2 & Unavailability of appointment web server & Medical staff and patients & Productivity & 5\\
+        \hline
+        3 & Unavailability of patient data system & Medical staff & Productivity & 8\\
+        \hline
+        4 & Patients data leakage & Hospital network & Fines and reputation & 10M\euro\\
+        \hline 
+        5 & Patients lives endangered & Patients & Injuries/Deaths & 10\\
+        \hline
+        6 & Medical devices replacement & Hospital & Replacement & 50k\euro/200k\euro/700k\euro\\
+        \hline
+        7 & Internal documents leakage & Hospital & Reputation & 5\\
+        \hline
+
+    \end{tblr}
+    \caption{Loss events related to actors impacted and their Magnitude}
+    \label{tab:loss-events}
+    \small
+    Types are given accordingly to the FAIR method. Two magnitude scales are used, a monetary scale in euros and a discrete 1-10 scale for events that cannot be monetary assessed. 
+\end{table}
+
+% TODO add explanation
+
+
+\section{Phase 2: System definition and decomposition}
+
+\subsection{List of system assets}
+
+The \autoref{tab:func-assets-htb} and \autoref{tab:func-assets-srtb} list the whole functions assets, respectively, inside the hospital trust boundary and the shared resources trust boundary. The lists provided are quite exhaustives and in the following diagrams, the hardwares and the platform are not distinguished and are depicted as independant trust boundaries if there are more than one service functions embedded in otherwise they are depicted as a function. The flows show interactions between services.
+
+\begin{table}
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        ID & Name & Type\\
+        \hline
+        1 & Firewall & Hardware\\
+        1.1 & Pfsense & Service\\
+        \hline
+        2 & Local file sharing server & Hardware\\
+        2.1 & Windows server & Platform \\
+        2.2 & Samba & Service\\
+        2.3 & File system & Storage\\
+        \hline
+        3 & Patient data server & Hardware\\
+        3.1 & Debian & Platform\\
+        3.2 & Patient data system & Service\\
+        3.3 & Postgresql database & Storage\\
+        \hline
+        4 & ERP server & Hardware\\
+        4.1 & ERP system & Service\\
+        4.2 & Debian & Platform\\
+        4.3 & Oracle database & Storage\\
+        \hline
+    \end{tabular}
+    \quad
+    \begin{tabular}{|l|l|l|}
+        \hline
+        ID & Name & Type\\
+        \hline
+        5 & Remote access server & Hardware\\
+        5.1 & Debian & Platform\\
+        5.2 & Wireguard service & Service\\
+        5.3 & Configuration file & Storage\\
+        \hline
+        6 & Electrical grid server & Hardware\\
+        6.1 & Debian & Platform\\
+        6.2 & Electrical grid system & Service\\
+        6.3 & Oracle database & Storage\\
+        \hline
+        7 & Wireless AP & Hardware\\
+        \hline
+        8 & Medical devices IoT & Hardware\\
+        \hline
+        9 & Medical staff computers & Hardware\\
+        9.1 & Windows 7 professional & Platform\\
+        \hline
+        10 & Medical staff tablets & Hardware\\
+        10.1 & Android 10 and above & Platform\\
+        \hline         
+    \end{tabular}
+    \caption{List of functions assets inside the hospital trust boundary}
+    \label{tab:func-assets-htb}
+\end{table}
+
+\begin{table}
+    \centering
+    \begin{tabular}{|l|l|l|}
+        \hline
+        ID & Name & Type\\
+        \hline
+        11 & Appointment server & Hardware\\
+        11.1 & Debian & Platform\\
+        11.2 & Apache web server & Service\\
+        11.3 & Appointment application & Service\\
+        11.4 & Apache file configuration & Storage\\
+        11.5 & MySQL database & Storage\\
+        \hline
+        12 & Network ERP server & Hardware\\
+        12.1 & ERP system & Service\\
+        12.2 & Debian & Platform\\
+        12.3 & Oracle database & Storage\\
+        \hline
+        13 & Active directory server & Hardware\\
+        13.1 & Windows server & Platform\\
+        13.2 & Active directory & Service\\
+        13.3 & Active directory storage & Storage\\
+        \hline
+        14 & Shared network firewall & Hardware\\
+        14.1 & Pfsense & Service\\
+        \hline
+        15 & Technical staff computers & Hardware\\
+        15.1 & Windows 7 professional & Platform\\
+        \hline
+    \end{tabular}
+    \caption{List of functions assets inside the shared resources trust boundary}
+    \label{tab:func-assets-srtb}
+\end{table}
+
+\subsection{Data-flow diagram}
+
+The \autoref{fig:data-flow-diag} describes the data flow inside the studied infrastructure. The flows that crosses the hospital and network shared resources boundaries go through the firewalls of both local networks.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{fig/Phase2-data-flow-diag_vis.drawio.png}
+    \caption{Data flow diagram of the studied infrastructure}
+    \label{fig:data-flow-diag}
+\end{figure}
 
 \section{Phase 3}
 
+
+\printbibliography
