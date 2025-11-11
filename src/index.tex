@@ -6,7 +6,7 @@ This document is the first draft of the project done for the EP2790 course at KT
 
 % For the last decade, attacks targeting hospitals has increased steadily. Therefore, I decided to choose, as subject of this case-study, a state-run hospital network computer infrastructure to study. This case-study is not based on an existing infrastructure and come from the imagination of the author. This work is part of the assignments for the course EP2790 Security analysis of large scale computer systems at KTH Royal Insitute in Sweden. The framework used for the risk analysis is the YACRAF framework (Yet another cybersecurity risk assessment framework) developped by KTH researchers~\autocite{EkstedtMathias2023Yacr} as required by the course examiner.
 
-\section{Phase 0: Scope and delimitations}
+\section{Phase 0: Scope and delimitation}
 
 First of all, it is necessary to define the purpose of the system, the main technical components and what is considered inside and outside of the scope of this study.\\
 \begin{figure}[h!]
@@ -38,7 +38,7 @@ The \autoref{fig:overview-diagram} represents the studied infrastructure of the 
     \item Appointment system: more widely public website of the hospital network that enables the patient to book appointment with doctors and access their prescriptions;
     \item Network ERP system: manages the network resources between hospital (distributing supplies, managing staff allotment and salaries, ...);
     \item Active directory server: LDAP server using Microsoft active directory to manage accounts and permissions for staff;
-    \item Technical staff computer: enables technical staff to access shared resources infrastructure and vpn servers of different hospitals;
+    \item Technical staff computer: enables technical staff to access shared resources infrastructure and VPN servers of different hospitals;
 \end{itemize}
 
 \section{Phase 1: Business analysis}
@@ -111,7 +111,7 @@ The \autoref{tab:loss-events} lists (not exhaustively) the possible loss events 
 
 \subsection{List of system assets}
 
-The \autoref{tab:func-assets-htb} and \autoref{tab:func-assets-srtb} list the whole functions assets, respectively, inside the hospital trust boundary and the shared resources trust boundary. The lists provided are quite exhaustives and in the following diagrams, the hardwares and the platform are not distinguished and are depicted as independant trust boundaries if there are more than one service functions embedded in otherwise they are depicted as a function. The flows show interactions between services.
+The \autoref{tab:func-assets-htb} and \autoref{tab:func-assets-srtb} list the whole functions assets, respectively, inside the hospital trust boundary and the shared resources trust boundary. The lists provided are quite exhaustive and in the following diagrams, the hardware and the platform are not distinguished and are depicted as independent trust boundaries if there are more than one service functions embedded in otherwise they are depicted as a function. The flows show interactions between services.
 
 \begin{table}
     \centering
@@ -215,5 +215,14 @@ The \autoref{fig:data-flow-diag} describes the data flow inside the studied infr
 
 \section{Phase 3}
 
+\subsection{Attackers profiles}
+
+\begin{itemize}
+    \item Organised crime: groups of hackers motivated by profit of hacking, in this case, this type of attackers will be include in the study;
+    \item Script kiddies: lonely attackers that want to show to their peers their capacity, apply hacking basic logic without understanding everything, this type of attackers will be include in this study also;
+    \item State actors: attackers working for states with support either interested in profit or instability in another country, considered in the scope of the study;
+    \item Competitors: other actors in the same field, in our case, there will be out of the scope since this is about health, it is a line that private clinic would not walk;
+    \item Rogue employee: employees that would be entitled to gain a monetary advantage of an attack, has a contact with the infrastructure, also exclude from the scope of this study.
+\end{itemize}
 
 \printbibliography
